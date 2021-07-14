@@ -1,9 +1,44 @@
-import React from 'react'
+import React from 'react';
+import { Redirect, useParams } from 'react-router-dom';
+import { getHeroById } from '../../selectors/getHeroById';
+
 
 export const HeroScreen = () => {
+
+    const { heroId } = useParams();
+    const hero = getHeroById( heroId );
+
+    if( !hero ){
+        return <Redirect to="/" />
+    }
+    const {
+        id,
+        superhero,
+        publisher,
+        alter_ego,
+        first_appearance,
+        characters,
+    } = hero
+
+    const path = `../assets/heroes/${id}.jpg`;
+
     return (
-        <div>
-            <h1>HeroScreen</h1>
+        <div className='hero-screen'>
+            <div className='img-hero'>
+                <img src={path} className="img img-responsive" alt={superhero}/>
+            </div>
+            <div className='hero-data'>
+                <h1>{superhero}</h1>
+                <h2>{alter_ego}</h2>
+                <p>{first_appearance}</p>
+                <p>{characters}</p>
+                <button 
+                    className='btn btn-primary' 
+                    // onClick={ handleReturn }
+                >
+                    Regresar
+                </button>
+            </div>
         </div>
     )
-}
+};
