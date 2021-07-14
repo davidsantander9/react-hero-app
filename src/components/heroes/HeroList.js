@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { getHeroesByPublisher } from '../../selectors/getHeroByPublisher'
 import { HeroCard } from './HeroCard';
 import "./HeroCard.css";
 
 export const HeroList = ({ publisher }) => {
 
-    const heroes = getHeroesByPublisher( publisher );
+    const heroes = useMemo(() => getHeroesByPublisher(publisher), [publisher])
 
     return (
         <div className='card-box' >
