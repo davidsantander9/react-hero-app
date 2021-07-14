@@ -3,7 +3,7 @@ import { Redirect, useParams } from 'react-router-dom';
 import { getHeroById } from '../../selectors/getHeroById';
 
 
-export const HeroScreen = () => {
+export const HeroScreen = ({ history }) => {
 
     const { heroId } = useParams();
     const hero = getHeroById( heroId );
@@ -22,6 +22,14 @@ export const HeroScreen = () => {
 
     const path = `../assets/heroes/${id}.jpg`;
 
+    const handleReturn = () => {
+        if( history.length <= 2){
+            history.push('/');
+        }else{
+            history.goBack();
+        }
+    }
+
     return (
         <div className='hero-screen'>
             <div className='img-hero'>
@@ -34,7 +42,7 @@ export const HeroScreen = () => {
                 <p>{characters}</p>
                 <button 
                     className='btn btn-primary' 
-                    // onClick={ handleReturn }
+                    onClick={ handleReturn }
                 >
                     Regresar
                 </button>
