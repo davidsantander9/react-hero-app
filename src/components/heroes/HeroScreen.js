@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 import { getHeroById } from '../../selectors/getHeroById';
-import Color, { Palette } from "color-thief-react";
+import Color from "color-thief-react";
 
 export const HeroScreen = ({ history }) => {
 
