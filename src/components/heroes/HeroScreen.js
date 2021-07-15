@@ -31,7 +31,7 @@ export const HeroScreen = ({ history }) => {
     }
 
     return (
-        <div className='hero-screen'>
+        <div className='hero-screen animate__animated animate__flipInX'>
             <div className='img-hero'>
                 <img src={path} className="img img-responsive" alt={superhero}/>
             </div>
