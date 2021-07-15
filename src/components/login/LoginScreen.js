@@ -4,18 +4,19 @@ import { types } from '../../types/types';
 
 export const LoginScreen = ({ history }) => {
 
-
     const { dispatch }  = useContext(AuthContext);
 
     const handleLogin = () => {
-        // history.push('/');
+
+        const lastPath = localStorage.getItem('lastPath') || '/';
+
         dispatch({
             type: types.login,
             payload: {
                 name:'David'
             }
         })
-        history.replace('/');
+        history.replace(lastPath);
     }
 
     return (
