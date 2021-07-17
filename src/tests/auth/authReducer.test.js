@@ -29,6 +29,7 @@ describe('Test on authReducer', () => {
         const action = {
             type: types.logout
         }
+        
         const state = authReducer({ 
             logged: true,
             name: 'David'
