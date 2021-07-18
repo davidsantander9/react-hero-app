@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test on <SearchScreen/> should show batman and the query-string value 1`] = `
+<div>
+  <h1>
+    Search Screen
+  </h1>
+  <div
+    className="row"
+  >
+    <div
+      className="col-5"
+    >
+      <h4>
+        Search Form
+      </h4>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="search"
+          onChange={[Function]}
+          placeholder="Find your hero"
+          type="text"
+          value=""
+        />
+        <button
+          className="btn m-1 btn-block btn-outline-primary"
+          type="submit"
+        >
+          Search ...
+        </button>
+      </form>
+    </div>
+    <div
+      className="col-7"
+    >
+      <h4>
+        Result
+      </h4>
+      <hr />
+      <a
+        className="my-card"
+        href="/hero/marvel-spider"
+        onClick={[Function]}
+      >
+        <img
+          alt="Spider Man"
+          className="img img-responsive"
+          src="./assets/heroes/marvel-spider.jpg"
+        />
+        <div
+          className="profile-name"
+        >
+          Spider Man
+        </div>
+        <div
+          className="profile-position"
+        >
+          Peter Parker
+        </div>
+        <div
+          className="profile-overview"
+        >
+          <div
+            className="profile-overview"
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="col-ms-4"
+              >
+                <h3>
+                  Marvel Comics
+                </h3>
+                <p>
+                  Primera aparición: 
+                  <br />
+                  Amazing Fantasy #15
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test on <SearchScreen/> should show with default values 1`] = `
+<div>
+  <h1>
+    Search Screen
+  </h1>
+  <div
+    className="row"
+  >
+    <div
+      className="col-5"
+    >
+      <h4>
+        Search Form
+      </h4>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="search"
+          onChange={[Function]}
+          placeholder="Find your hero"
+          type="text"
+          value=""
+        />
+        <button
+          className="btn m-1 btn-block btn-outline-primary"
+          type="submit"
+        >
+          Search ...
+        </button>
+      </form>
+    </div>
+    <div
+      className="col-7"
+    >
+      <h4>
+        Result
+      </h4>
+      <hr />
+    </div>
+  </div>
+</div>
+`;
