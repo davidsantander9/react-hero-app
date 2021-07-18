@@ -7,7 +7,7 @@ export const HeroScreen = ({ history }) => {
 
     const { heroId } = useParams();
 
-    const hero = useMemo(() => getHeroById( heroId ), heroId);
+    const hero = useMemo(() => getHeroById( heroId ), [heroId]);
 
 
     if( !hero ){
