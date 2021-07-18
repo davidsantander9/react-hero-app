@@ -53,7 +53,9 @@ Array [
       >
         <span
           className="nav-item nav-link text-info"
-        />
+        >
+          Luis
+        </span>
         <button
           className="nav-item nav-link btn"
           onClick={[Function]}

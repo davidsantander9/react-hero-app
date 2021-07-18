@@ -9,7 +9,8 @@ describe('Test on <DashboardRoutes/>', () => {
     const contextValue = {
         dispatch: jest.fn(),
         user:{
-            logged: false
+            logged: true,
+            name: 'Luis'
         }
     }
 
@@ -24,6 +25,7 @@ describe('Test on <DashboardRoutes/>', () => {
         );
 
         expect( wrapper ).toMatchSnapshot();
+        expect( wrapper.find('.text-info').text().trim() ).toBe('Luis');
 
     });
     
