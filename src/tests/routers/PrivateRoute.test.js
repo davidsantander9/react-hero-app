@@ -29,5 +29,22 @@ describe('Test on <PrivateRoute/>', () => {
         expect( localStorage.setItem ).toHaveBeenCalledWith('lastPath', '/marvel');
 
     });
+
+    test('should block the component if is  not authenticated', () => {
+
+        const wrapper = mount(
+            <MemoryRouter>
+                <PrivateRoute 
+                    isAuthenticaded = { false }
+                    component = { () => <span>Ready!</span> }
+                    {...props}
+                />
+            </MemoryRouter>
+        );  
+
+        expect(wrapper.find('span').exists()).toBe(false);
+        // expect( localStorage.setItem ).toHaveBeenCalledWith('lastPath', '/marvel');
+
+    });
     
 })
